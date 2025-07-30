@@ -58,7 +58,7 @@ export const Signup = () => {
       const imgForm = new FormData();
       imgForm.append('image', imageFile);
 
-      const uploadRes = await axios.post('http://localhost:7822/Api/upload', imgForm);
+      const uploadRes = await axios.post(`${import.meta.env.VITE_URL}/Api/upload`, imgForm);
       IMAGEURL = uploadRes.data.imageUrl;
 
       // Signup request

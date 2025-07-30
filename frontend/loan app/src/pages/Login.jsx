@@ -35,7 +35,7 @@ export const Login = () => {
     try {
       setIsLoading(true);
 
-      const response = await axios.post('http://localhost:7822/sigin/login', {
+      const response = await axios.post(`${import.meta.env.VITE_URL}/sigin/login`, {
         email: email,
         password: password
       });

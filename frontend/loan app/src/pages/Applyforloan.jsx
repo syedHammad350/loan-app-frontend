@@ -31,7 +31,7 @@ export const Applyforloan = () => {
     e.preventDefault();
 
     try {
-      const response = await axios.post('http://localhost:7822/ipa/form', formData);
+      const response = await axios.post(`${import.meta.env.VITE_URL}/ipa/form`, formData);
 
       if (response.status === 200 || response.status === 201) {
         toast.success('Form submitted successfully!', { position: 'top-right' });

@@ -21,7 +21,7 @@ export const Contactus = () => {
     e.preventDefault();
     // console.log('Contact Form Submitted:', formData);
     try {
-      const res = await axios.post('http://localhost:7822/pia/contact', formData);
+      const res = await axios.post(`${import.meta.env.VITE_URL}/pia/contact`, formData);
       // console.log(res);
      
       if (res.status === 200) {
