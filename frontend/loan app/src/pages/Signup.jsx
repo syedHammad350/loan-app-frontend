@@ -62,7 +62,7 @@ export const Signup = () => {
       IMAGEURL = uploadRes.data.imageUrl;
 
       // Signup request
-      const res = await axios.post('http://localhost:7822/api/signup', {
+      const res = await axios.post(`${import.meta.env.VITE_URL}/api/signup`, {
         name,
         email,
         password,
